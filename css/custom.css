@@ -1,0 +1,27 @@
+.reveal section img.plain {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 15px;
+}
+
+.reveal section a.email,.reveal section a.twitter,.reveal section a.github {
+	display: inline;
+    padding-left: 1.2em;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    /* background-size: contain; */
+    background-size: 1.0em;
+}
+
+.reveal section a.email {
+    background-image: url("../img/mail-logo.png");
+}
+
+.reveal section a.github {
+    background-image: url("../img/github-logo.png");
+}
+
+.reveal section a.twitter {
+    background-image: url("../img/twitter-logo.png");
+}

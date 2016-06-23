@@ -1,50 +1,499 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<meta name="description" content="Neuerungen im GeoServer">
+	<meta name="author" content="Nils Bühner">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<title>Neuerungen im GeoServer</title>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- Startseite -->
+			<section id="start">
+				<!-- data-background="img/geoserver-logo.png" data-background-size="30%"> -->
+				<!-- 					<img data-src="img/geoserver-logo.png" style="background:none; border:none; box-shadow:none;"/> -->
+				<h4>FOSSGIS 2016 - Salzburg</h4>
+				<h2>Neuerungen im GeoServer</h2>
+				<p>
+					Nils Bühner
+					<br />
+					<small><a href="https://www.terrestris.de">terrestris GmbH & Co KG</a>
+					</small>
+				</p>
+			</section>
+
+			<!-- About -->
+			<section id="about">
+				<h2>About</h2>
+
+				<!-- About NB -->
+				<section id="about-nb">
+					<div style="float: left; margin: 0 0 0 4em;">
+						<img src="img/nb.png" class="plain">
+						<br/>Nils Bühner
+						<br/>
+						<small><a class="email" href="mailto:buehner@terrestris.de">buehner@terrestris.de</a>
+							<br /><a class="github" href="https://github.com/buehner">github.com/buehner</a></small>
+					</div>
+					<br/>
+					<ul>
+						<li>Informatiker</li>
+						<li>Java (Spring, Hibernate)</li>
+						<li>Webtechnologien</li>
+						<li>Entwickler bei <a href="https://www.terrestris.de">terrestris</a></li>
+					</ul>
+				</section>
+
+				<!-- About terrestris -->
+				<section id="about-terrestris">
+					<div style="float: left; margin: 0 0 0 3em;">
+						<img src="img/terrestris-logo-normal.svg" class="plain">
+						<br/>
+						<small><a href="https://www.terrestris.de/">terrestris GmbH & Co KG</a></small>
+						<br/>
+						<small><a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
+							<br /><a class="github" href="https://github.com/terrestris">github.com/buehner</a></small>
+					</div>
+					<br/>
+					<ul>
+						<li>OpenSource GIS aus Bonn</li>
+						<li>Projekte, Support &amp; Schulung</li>
+						<li>Beratung &amp; Planung</li>
+						<li>Implementierung &amp; Wartung</li>
+					</ul>
+				</section>
+
+			</section>
+
+			<!-- Geoserver -->
+			<section id="geoserver">
+				<h2>GeoServer</h2>
+
+				<!-- About Geoserver -->
+				<section id="about-geoserver">
+					<div style="float: left; margin: 2em 0 0 3em;">
+						<img src="img/geoserver-logo.png" class="plain">
+						<br />
+						<small><a class="github" href="https://github.com/geoserver">github.com/geoserver</a></small>
+					</div>
+					<br/>
+					<ul>
+						<li>Java-basierter Server
+							<br/>für Geodaten</li>
+						<li>Standards des <a href="http://www.opengeospatial.org/">OGC</a>
+							<br />
+							<small>(z.B. WMS, WFS(-T), WPS)</small>
+						</li>
+						<li>flexibel und erweiterbar</li>
+						<li>gut dokumentiert (<a href="http://docs.geoserver.org/stable/user/">user</a>/<a href="http://docs.geoserver.org/stable/developer/">dev</a>)
+						</li>
+					</ul>
+				</section>
+
+				<!-- Geoserver GUI -->
+				<section id="geoserver-gui">
+					<img src="img/geoserver-gui.png" class="plain" style="float: left; margin: 2em 0 0 3em;">
+					<br/>
+					<br/>
+					<br/>
+					<ul>
+						<li>Konfiguration über Browser</li>
+						<li>OGC-Dienste</li>
+						<li>Monitoring
+							<br />
+							<small>(Serverstatus, Logs)</small>
+						</li>
+						<li>erweiterte Features
+							<br />
+							<small>(z.B. GeoWebCache)</small>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Geoserver -->
+				<section id="geoserver-release-cycle">
+					<br />
+					<h4>Release-Zyklus</h4>
+					<img src="img/geoserver-release-cycle.png" class="plain">
+					<small>Quelle:
+						<br/><a href="http://docs.geoserver.org/latest/en/developer/policies/community-process.html">http://docs.geoserver.org/latest/en/developer/policies/community-process.html</a>
+					</small>
+				</section>
+
+			</section>
+
+			<!-- Was ist passiert? -->
+			<section id="was-ist-passiert">
+				<h2>Was ist im letzten Jahr passiert?</h2>
+				<ul>
+					<li class="fragment shrink">Allgemeine Bugfixes</li>
+					<li class="fragment grow highlight-blue">Security fixes</li>
+					<li class="fragment grow highlight-blue">Neue Features</li>
+				</ul>
+				<br />
+				<p>In diesem Vortrag:</p>
+				<p class="fragment grow"><b>Breite statt Tiefe</b>
+			</section>
+
+			<!-- XEE Vulnerability -->
+			<section id="xee-vulnerability">
+				<h2>XEE Vulnerability</h2>
+				<p>Unberechtigter <b>Abruf beliebiger Dateien</b> vom Server
+					<br/><img src="img/monkey.png" class="plain" style="margin: 0px 0px -10px 0px"><img src="img/monkey.png" class="plain" style="margin: 0px 0px -10px 0px"><img src="img/monkey.png" class="plain" style="margin: 0px 0px -10px 0px"></p>
+
+				<p>Details: <a href="http://blog.geoserver.org/2015/06/27/geoserver-xee-vulnerability/">Blogpost vom 27. Juni 2015</a></p>
+				<p>Ticket: <a href="https://osgeo-org.atlassian.net/browse/GEOS-7032">GEOS-7032</a></p>
+
+				<p>Gefixt in:</p>
+
+				<ul>
+					<li>2.7.1.1 <small>(stable patch release)</small></li>
+					<li>2.6.4 <small>(maintenance release)</small></li>
+					<li>2.5.5.1 <small>(patch release)</small></li>
+				</ul>
+			</section>
+
+			<!-- XEE Vulnerability -->
+			<section id="rest-api-remote-code-execution">
+				<h2>Remote Code Execution</h2>
+				<p>Unberechtigtes <b>Ausführen von Code</b> auf dem Server
+					<br/><img src="img/monkey.png" class="plain" style="margin: 0px 0px -10px 0px"><img src="img/monkey.png" class="plain" style="margin: 0px 0px -10px 0px"><img src="img/monkey.png" class="plain" style="margin: 0px 0px -10px 0px"></p>
+
+				<p>Details: <a href="http://blog.geoserver.org/2015/10/20/remote-execution-vulnerability/">Blogpost vom 20. Oktober 2015</a></p>
+				<p>Ticket: <a href="https://osgeo-org.atlassian.net/browse/GEOS-7124">GEOS-7124</a></p>
+
+				<p>Gefixt in:</p>
+
+				<ul>
+					<li>2.8.0 <small>(stable release)</small></li>
+					<li>2.7.3 <small>(maintenance release)</small></li>
+					<li>2.6.5 <small>(archived release)</small></li>
+				</ul>
+
+			</section>
+
+			<!-- Code Sprint -->
+			<section id="code-sprint">
+				<h2>Code Sprint</h2>
+				<img src="img/codesprint.jpg" class="plain" style="width: 48%; float: left; margin: 0 1em 0 0;">
+				<p>Codesprint Mitte Januar 2016 in Kanada</p>
+				<p>Update von Apache Wicket (GUI) von v1.4 auf v7.x (!)
+					<br /><small>Drin seit Release 2.9.0</small></p>
+				<p>Finanziert durch Sponsoren</p>
+				<small>Quelle:
+					<br/><a href="http://blog.geoserver.org/2016/01/25/geoserver-code-sprint-success/">http://blog.geoserver.org/2016/01/25/geoserver-code-sprint-success/</a>
+				</small>
+			</section>
+
+			<!-- Neue Features? -->
+			<section id="neue-features">
+				<h2>Neue Features?</h2>
+				<ul>
+					<li>2.7.x (März 2015)</li>
+					<li>2.8.x (Oktober 2015)</li>
+					<li>2.9.x (Juni 2016)</li>
+				</ul>
+			</section>
+
+			<!-- v2.7.x -->
+			<section id="v2.7.x">
+				<h2>2.7.x</h2>
+
+				<!-- WMS Time -->
+				<section id="wms-time">
+					<h3>WMS Time</h3>
+					<p>Unterstützung relativer Zeitangaben:</p>
+					<ul>
+						<li>Letzten 36 Stunden (bis jetzt)<pre><code data-trim class="bash">time=PT36H/PRESENT</code></pre></li>
+						<li>Der Tag nach dem 25.12.2012<pre><code data-trim class="bash">time=2010-12-25T00:00:00.0Z/P1D</code></pre></li>
+					</ul>
+					<small>Mehr: <a href="http://boundlessgeo.com/2015/03/using-wms-time-explore-data/">http://boundlessgeo.com/2015/03/using-wms-time-explore-data/</a>
+					</small>
+				</section>
+
+				<!-- Farbkomposition und -mischung -->
+				<section id="color-blending">
+					<h4 style="margin: 1em 0 0 0;">Alpha composition and Color blending</h4>
+					<p>Verschiedene Filter und Effekte (SLD),
+						<br /><small>z.B. <em>multiply</em>, <em>darken</em>, <em>hard light</em></small></p>
+					<img src="img/blending.png" class="plain" style="width: 75%; margin: -1em 0 0 0;">
+
+					<small>Mehr: <a href="http://docs.geoserver.org/latest/en/user/styling/sld-extensions/composite-blend/">http://docs.geoserver.org/latest/en/user/styling/sld-extensions/composite-blend/</a></small>
+				</section>
+
+				<!-- WPS -->
+				<section id="wps">
+					<h3>WPS</h3>
+					<ul>
+						<li>Anbindung an das Security-System des GS</li>
+						<li>Limitierung <small>(<em>timeouts, max parallel executions</em>)</small></li>
+						<li>Prozesse können gestoppt werden</li>
+						<li>Prozess-Monitoring in der GUI</li>
+						<li>Status eines Prozesses nun auch im Cluster bekannt</li>
+					</ul>
+					<br />
+					<br />
+					<small>Details: <a href="https://2015.foss4g-na.org/sites/default/files/slides/gs_wps_foss4g_na_2015.pdf">Status of GeoServer WPS, Andrea Aime, FOSS4G-NA 2015</a>
+					</small>
+				</section>
+
+				<!-- Cascaded WFS -->
+				<section id="cascaded-wfs">
+					<h3>Cascaded WFS Stored Queries</h3>
+					<ul>
+						<li>GeoServer als Proxy</li>
+						<li>Layer auf Basis vorkonfigurierter Anfragen an externe WFS-Dienste erzeugen</li>
+						<li>Mapping von Anfrageparametern</li>
+						<li>Read-Only (kein WFS-T)</li>
+					</ul>
+					<br />
+					<br />
+					<small>Mehr: <a href="http://docs.geoserver.org/latest/en/user/data/cascaded/stored_query.html">http://docs.geoserver.org/latest/en/user/data/cascaded/stored_query.html</a>
+					</small>
+				</section>
+
+			</section>
+
+			<!-- v2.8.x -->
+			<section id="v2.8.x">
+				<h2>2.8.x</h2>
+
+				<!-- Curved Geometries -->
+				<section id="curved-geometries">
+					<h3 style="margin: 1em 0 0 0;">Curved Geometries</h3>
+					<img src="img/curved.png" class="plain" style="width: 50%; margin: 0 0 -1em 0;">
+					<p>Bisher: Unterstützung von <em>curved geometries</em> aus Oracle-DB
+						<br />(nur lesend)</p>
+					<p>Neu: Unterstützung von <em>curved geometries</em> aus PostGIS
+						<br />(lesend <b>und</b> schreibend)</p>
+					<small>Mehr: <a href="http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#curves-support-vector">http://docs.geoserver.org/latest/en/user/data/webadmin/layers.html#curves-support-vector</a>
+					</small>
+				</section>
+
+				<!-- Feature filter -->
+				<section id="feature-filter">
+					<h3>Feature filter</h3>
+					<img src="img/feature-filter.png" class="plain" style="width: 50%; margin: 0 0 -1em 0;">
+					<p><em>"Mini SQL view"</em></p>
+					<p>Unabhängig von der Datenquelle</p>
+					<p>Unabhängig vom Protokoll</p>
+				</section>
+
+				<!-- JAI-Ext -->
+				<section id="JAI-Ext">
+					<h3 style="margin: 1.2em 0 0 0;">JAI-Ext</h3>
+					<p>JAI = Oracle Java Advanced Imaging (default)</p>
+
+					<p>JAI-Ext = JAI <b>Open Source</b>
+						<br /><small>(unterstützt Raster NODATA)</small>
+						<br/><small><a class="github" href="https://github.com/geosolutions-it/jai-ext">github.com/geosolutions-it/jai-ext</a></small>
+						<br/>
+						<pre><code data-trim class="bash">-Dorg.geotools.coverage.jaiext.enabled=true</code></pre>
+					</p>
+					<img src="img/jai-ext.png" class="plain" style="width: 40%; margin: 0 0 -1em 0;">
+
+
+				</section>
+
+				<!-- Importer -->
+				<section id="importer">
+					<h3 style="margin: 1.2em 0 0 0;">Importer</h3>
+					<p>Prozessierung von Rasterdaten während des Imports</p>
+					<p>Reprojektion:</p>
+					<pre><code data-trim class="json">
+{
+  "type": "GdalWarpTransform",
+  "options": [ "-t_srs", "EPSG:4326"]
+}
+					</code></pre>
+
+					<p>Overviews erzeugen:</p>
+					<pre><code data-trim class="json">
+{
+  "type": "GdalAddoTransform",
+  "options": [ "-r", "average"],
+  "levels" : [2, 4, 8, 16]
+}
+					</code></pre>
+
+					<small>Mehr: <a href="http://docs.geoserver.org/latest/en/user/extensions/importer/rest_reference.html">http://docs.geoserver.org/latest/en/user/extensions/importer/rest_reference.html</a></small>
+
+				</section>
+
+				<!-- Z-Order -->
+				<section id="z-order">
+					<h3 style="margin: 1.2em 0 0 0;">z ordering support</h3>
+					<img src="img/z-order.png" class="plain" style="width: 60%; margin: 1em 0 0 0;">
+					<p>Neue Optionen im SLD: <b>sortBy</b> und <b>sortByGroup</b></p>
+
+					<small>Mehr: <a href="http://docs.geoserver.org/latest/en/user/styling/sld-extensions/z-order/index.html">http://docs.geoserver.org/latest/en/user/styling/sld-extensions/z-order/index.html</a></small>
+
+				</section>
+
+				<!-- Arrows -->
+				<section id="arrows">
+					<h3 style="margin: 0.5em 0 0 0;">Dynamische Pfeile</h3>
+
+					<p>Generelle Syntax:</b>
+					</p>
+
+					<pre><code data-trim class="xml">
+<WellKnownName>
+	extshape://arrow?hr=[hrValue]&t=[tValue]&ab=[abValue]
+</WellKnownName>
+					</code></pre>
+
+					<ul>
+						<li><b>hr</b>: height over width ratio <small style="margin: 0.5em 0 0 1em">hr > 0 - default: 2</small><img src="img/arrow-hr.png" class="plain" style="height: 1em; margin: 0 0 0 2em;"></li>
+						<li><b>t</b>: thickness <small style="margin: 0.5em 0 0 9em">t &isin; [0,1] - default: 0.2</small><img src="img/arrow-t.png" class="plain" style="height: 1em; margin: 0 0 0 0.5em;"></li>
+						<li><b>ab</b>: area head base ratio <small style="margin: 0.8em 0 0 0.5em">ab &isin;[0,1] - default: 0.5</small><img src="img/arrow-ab.png" class="plain" style="height: 1.2em; margin: 0 0 0 0;"></li>
+						<ul>
+
+							<br />
+							<small>Mehr: <a href="http://www.geo-solutions.it/blog/customizable-arrow-geoserver/">http://www.geo-solutions.it/blog/customizable-arrow-geoserver/</a></small>
+
+				</section>
+
+				<!-- Sonstiges -->
+				<section id="sonstiges">
+					<h3 style="margin: 1em 0 0 0;">Sonstiges</h3>
+
+					<ul>
+						<li>Community:</li>
+						<ul>
+							<li>Embedded GeoFence <small style="margin: 0.5em 0 0 1em"><a class="github" href="https://github.com/geoserver/geofence">github.com/geoserver/geofence</a></small></li>
+							<li>MongoDB als Datenquelle</li>
+						</ul>
+						<li>Erhöhte Label-Dichte <img src="img/label-density.png" class="plain" style="height: 2em; margin: 0 0 0 0;">
+						</li>
+						<li>Neue Stile auf Basis von Vorlagen
+						</li>
+						<li>Neue Vendor-Parameter zur Kontrastverbesserung
+						</li>
+						<ul>
+
+							<img src="img/contrast.png" class="plain" style="margin: 0 0 0 0;">
+
+							<small>Mehr: <a href="http://docs.geoserver.org/latest/en/user/styling/sld-reference/rastersymbolizer.html#contrastenhancement">http://docs.geoserver.org/latest/en/user/styling/sld-reference/rastersymbolizer.html#contrastenhancement</a></small>
+
+
+				</section>
+
+			</section>
+
+			<!-- v2.9.x -->
+			<section id="v2.9.x">
+				<h2>2.9.x</h2>
+
+				<!-- Neue Voraussetzungen -->
+				<section id="neue-voraussetzungen">
+					<h3>Neue Voraussetzungen</h3>
+					<ul>
+						<li>Java 8 ist Pflicht
+							<br /><small>OpenJDK auch möglich</small></li>
+						<li>Servlet 3 kompatibler Server
+							<br /><small>z.B. Tomcat 7.x oder Jetty 8.x</small></li>
+					</ul>
+				</section>
+
+				<!-- Interne Upgrades -->
+				<section id="internes">
+					<h3>Internes</h3>
+					<ul>
+						<li>Upgrade auf Wicket 7
+							<br /><small>(CodeSprint)</small></li>
+						<li>Upgrade auf Spring 4
+							<br /><small>(-> Verzögerung des Releases)</small></li>
+						<li>Upgrade auf JAI-Ext 1.0.9</li>
+						<li>Verbesserungen in der GUI</li>
+						<li>Restrukturierung des user guides</li>
+					</ul>
+				</section>
+
+				<!-- Neue Features 2.9.x -->
+				<section id="neue-features-2-9-x">
+					<h3>Neue Features</h3>
+					<ul>
+						<li>Linien mit Versatz (SLD/CSS)</li>
+						<li>Resource REST API
+							<br /><small>(icons, fonts, config files)</small></li>
+						<li>About/Status REST API
+							<br /><small>(installierte Komponenten)</small></li>
+						<li>UTFGrid Unterstützung für WMS und WMTS</li>
+						<li>Vektormasken, um NODATA Bereiche auszuschneiden</li>
+					</ul>
+					<img src="img/line-offset.png" class="plain" style="float: right; margin: 0 0 0 -9em;">
+					<br />
+					<br /><small>Details: <a href="http://blog.geoserver.org/2016/05/30/geoserver-2-9-0-released/">http://blog.geoserver.org/2016/05/30/geoserver-2-9-0-released/</a></small>
+				</section>
+
+			</section>
+
+			<!-- Ausblick -->
+			<section id="fragen">
+				<h2>Fragen</h2> ???
+			</section>
+
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			controls: true,
+			progress: true,
+			center: true,
+			slideNumber: false,
+			keyboard: true,
+			overview: true,
+			loop: false,
+			backgroundTransition: 'zoom',
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}, {
+				src: 'plugin/notes/notes.js',
+				async: true
+			}, {
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}]
+		});
+	</script>
+</body>
+
 </html>
